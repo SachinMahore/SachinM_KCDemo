@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SachinM_KCDemo", "SachinM_KCDemo\SachinM_KCDemo.csproj", "{4A0DA452-92A8-465C-9E5E-0E12F2F0CCBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SachinM_KCDemo.Tests", "SachinM_KCDemo.Tests\SachinM_KCDemo.Tests.csproj", "{4CF9DDF0-843D-4E85-A53A-2457E8F80326}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A0DA452-92A8-465C-9E5E-0E12F2F0CCBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A0DA452-92A8-465C-9E5E-0E12F2F0CCBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A0DA452-92A8-465C-9E5E-0E12F2F0CCBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A0DA452-92A8-465C-9E5E-0E12F2F0CCBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CF9DDF0-843D-4E85-A53A-2457E8F80326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CF9DDF0-843D-4E85-A53A-2457E8F80326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CF9DDF0-843D-4E85-A53A-2457E8F80326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CF9DDF0-843D-4E85-A53A-2457E8F80326}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
