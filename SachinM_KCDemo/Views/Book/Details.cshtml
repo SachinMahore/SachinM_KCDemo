@@ -1,0 +1,28 @@
+﻿@using SachinM_KCDemo.Models
+@model BookModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<script src="~/Content/Pages/Book/Book.js"></script>
+
+
+<div class="jumbotron">
+    <h1>@Model.Name</h1>
+    <p class="lead">By - @Model.Author    ISBN: @Model.ISBN</p>
+</div>
+
+<div class="row">
+    <div class="col-md-7">
+        <p>
+            @Model.Description
+        </p>
+    </div>
+    <div class="col-md-5">
+        <img src="~/Content/Images/Book/@Model.Photo" class="img-thumbnail"/>
+    </div>
+   
+</div>
+
+
+

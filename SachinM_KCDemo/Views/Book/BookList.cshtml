@@ -1,0 +1,26 @@
+﻿@using  SachinM_KCDemo.Models
+@model IEnumerable<BookModel>
+@{
+    ViewBag.Title = "Book List";
+}
+
+<h2>Book List</h2>
+
+<div class="col-md-12">
+    <div class="row" id="tblBook">
+        @foreach (var bl in Model)
+        {
+        <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="/Book/Details/@bl.BookID"><img class="card-img-top" src="~/Content/Images/Book/@bl.Photo" alt="Card image cap"></a>
+                        <h5 class="card-title">@bl.Name</h5>
+                        <p class="card-text">ISBN: @bl.ISBN</p>
+                        <p class="card-text">By - @bl.Author</p>
+                        <a href="/Book/Details/@bl.BookID" class="btn btn-primary">See Details</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
