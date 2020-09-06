@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using SachinM_KCDemo.Data;
+using System.Data;
+using System.Data.Common;
 
 namespace SachinM_KCDemo.Models
 {
@@ -28,13 +30,51 @@ namespace SachinM_KCDemo.Models
                     {
                         BookID = bl.BookID,
                         Name = bl.Name,
-                        ISBN = (bl.ISBN==null?"":bl.ISBN),
+                        ISBN = (bl.ISBN == null ? "" : bl.ISBN),
                         Description = bl.Description,
                         Photo = bl.Photo,
-                        Author=bl.Author,
+                        Author = bl.Author,
                     });
                 }
             }
+            //// By using Stored Procedure
+            //try
+            //{
+            //    DataTable dtTable = new DataTable();
+            //    using (var cmd = db.Database.Connection.CreateCommand())
+            //    {
+            //        db.Database.Connection.Open();
+            //        cmd.CommandText = "usp_GetBookList";
+            //        cmd.CommandType = CommandType.StoredProcedure;
+
+            //        DbParameter paramName = cmd.CreateParameter();
+            //        paramName.ParameterName = "SearchText";
+            //        paramName.Value = "Sachin";
+            //        cmd.Parameters.Add(paramName);
+
+            //        DbDataAdapter da = DbProviderFactories.GetFactory("System.Data.SqlClient").CreateDataAdapter();
+            //        da.SelectCommand = cmd;
+            //        da.Fill(dtTable);
+            //        db.Database.Connection.Close();
+            //    }
+            //    foreach (DataRow dr in dtTable.Rows)
+            //    {
+            //        BookModel blmodel = new BookModel();
+            //        blmodel.BookID = Convert.ToInt32(dr["BookID"].ToString());
+            //        blmodel.Name = dr["Name"].ToString();
+            //        blmodel.Description = dr["Description"].ToString();
+            //        blmodel.Author = dr["Author"].ToString();
+            //        blmodel.ISBN = dr["ISBN"].ToString();
+            //        blmodel.Photo = dr["Photo"].ToString();
+            //        lstBook.Add(blmodel);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    db.Database.Connection.Close();
+            //    throw ex;
+            //}
+
             db.Dispose();
             return lstBook;
         }
